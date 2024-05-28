@@ -1,14 +1,16 @@
-export const transitionBetweenTreeMapAndSunburstCodeSnippet = `import {
+export const transitionBetweenTreeMapAndSunburstCodeSnippet = `import Drawer from '@/components/Drawer';
+import { transitionBetweenTreeMapAndSunburstCodeSnippet } from '@/constant/tree-map/transitionBetweenTreeMap&Sunburst';
+import {
     ReactEcharts,
     EChartsOption,
 } from 'echarts-wrapper-react';
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const TransitionBetweenTreeMapAndSunburst = () => {
     const data: any = useLoaderData();
 
-    const treemapOption = {
+    const treemapOption: any = {
         series: [
             {
                 type: 'treemap',
@@ -61,10 +63,12 @@ const TransitionBetweenTreeMapAndSunburst = () => {
             console.log('here');
         }, 3000);
         return () => clearInterval(interval);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    return <ReactEcharts option={option} />;
+    return (
+            <ReactEcharts option={option} />
+    )
 };
 
 export default TransitionBetweenTreeMapAndSunburst;
@@ -77,4 +81,5 @@ export async function TransitionBetweenTreeMapAndSunburstLoader() {
     console.log(data);
     return data;
 }
+
 `;

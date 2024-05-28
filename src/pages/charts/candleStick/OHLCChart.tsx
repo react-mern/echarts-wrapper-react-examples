@@ -8,8 +8,8 @@ const OHLCChart = () => {
     const rawData: any = useLoaderData();
 
     function splitData(rawData: number[][]) {
-        const categoryData = [];
-        const values = [];
+        const categoryData: any = [];
+        const values: any = [];
         for (let i = 0; i < rawData.length; i++) {
             categoryData.push(rawData[i][0]);
             rawData[i][0] = i;

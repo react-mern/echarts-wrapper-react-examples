@@ -4,7 +4,7 @@ import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom'
 
 const RadialTree = () => {
-    const data = useLoaderData();
+    const data: any = useLoaderData();
     const option: EChartsOption = {
         tooltip: {
             trigger: 'item',

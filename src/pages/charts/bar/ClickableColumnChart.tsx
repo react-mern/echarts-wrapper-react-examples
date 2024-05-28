@@ -1,6 +1,6 @@
 import Drawer from '@/components/Drawer';
 import { clickableColumnChartCodeSnippets } from '@/constant/bar/clickableColumnChart';
-import { graphic } from 'echarts';
+import { ECElementEvent, graphic } from 'echarts';
 import { ReactEchartsComponentProps, EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
 
 const ClickableColumnChart = () => {
@@ -79,9 +79,9 @@ const ClickableColumnChart = () => {
         click: function ({ event, chartInstance }) {
             chartInstance.dispatchAction({
                 type: 'dataZoom',
-                startValue: dataAxis[Math.max(event?.dataIndex - zoomSize / 2, 0)],
+                startValue: dataAxis[Math.max((event as ECElementEvent)?.dataIndex - zoomSize / 2, 0)],
                 endValue:
-                    dataAxis[Math.min(event?.dataIndex + zoomSize / 2, data.length - 1)],
+                    dataAxis[Math.min((event as ECElementEvent).dataIndex + zoomSize / 2, data.length - 1)],
             });
         },
     };

@@ -1,4 +1,6 @@
-export const OHLCChartCodeSnippet = `import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+export const OHLCChartCodeSnippet = `import Drawer from '@/components/Drawer';
+import { OHLCChartCodeSnippet } from '@/constant/candleStick/OHLCChart';
+import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 
 const OHLCChart = () => {
@@ -6,8 +8,8 @@ const OHLCChart = () => {
     const rawData: any = useLoaderData();
 
     function splitData(rawData: number[][]) {
-        const categoryData = [];
-        const values = [];
+        const categoryData: any = [];
+        const values: any = [];
         for (let i = 0; i < rawData.length; i++) {
             categoryData.push(rawData[i][0]);
             rawData[i][0] = i;
@@ -167,7 +169,7 @@ const OHLCChart = () => {
     }
 
     return (
-        <ReactEcharts option={option} />
+            <ReactEcharts option={option} />
     )
 }
 

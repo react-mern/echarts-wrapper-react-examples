@@ -1,8 +1,10 @@
-export const radialTreeCodeSnippet = `import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+export const radialTreeCodeSnippet = `import Drawer from '@/components/Drawer';
+import { radialTreeCodeSnippet } from '@/constant/tree/radialTree';
+import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom'
 
 const RadialTree = () => {
-    const data = useLoaderData();
+    const data: any = useLoaderData();
     const option: EChartsOption = {
         tooltip: {
             trigger: 'item',
@@ -26,7 +28,7 @@ const RadialTree = () => {
         ]
     }
     return (
-        <ReactEcharts option={option} />
+            <ReactEcharts option={option} />
     )
 }
 

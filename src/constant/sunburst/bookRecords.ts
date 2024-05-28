@@ -1,4 +1,6 @@
-export const bookRecordsCodeSnippet = `import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+export const bookRecordsCodeSnippet = `import Drawer from '@/components/Drawer';
+import { bookRecordsCodeSnippet } from '@/constant/sunburst/bookRecords';
+import { ReactEcharts } from 'echarts-wrapper-react';
 
 const BookRecords = () => {
     const colors = ['#FFAE57', '#FF7853', '#EA5151', '#CC3F57', '#9A2555'];
@@ -355,7 +357,7 @@ const BookRecords = () => {
             };
         }
     }
-    const option: EChartsOption = {
+    const option: any = {
         backgroundColor: bgColor,
         color: colors,
         series: [
@@ -428,9 +430,10 @@ const BookRecords = () => {
         ],
     };
     return (
-        <ReactEcharts option={option} />
+            <ReactEcharts option={option} />
     );
 };
 
 export default BookRecords;
+
 `;

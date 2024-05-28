@@ -1,9 +1,11 @@
 export const clusteringProcessChartCodeSnippet = `import { registerTransform } from 'echarts';
 import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
 import ecStat from 'echarts-stat';
+import Drawer from '@/components/Drawer';
+import { clusteringProcessChartCodeSnippet } from '@/constant/scatter/clusteringProcess';
 
 const ClusteringProcess = () => {
-    registerTransform(ecStat.transform.clustering);
+    registerTransform((ecStat as any).transform.clustering);
 
     const data = [
         [3.275154, 2.957587],
@@ -136,7 +138,7 @@ const ClusteringProcess = () => {
 
 
     return (
-        <ReactEcharts option={option} />
+            <ReactEcharts option={option} />
     )
 }
 

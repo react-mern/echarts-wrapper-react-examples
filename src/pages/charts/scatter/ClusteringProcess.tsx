@@ -5,7 +5,7 @@ import Drawer from '@/components/Drawer';
 import { clusteringProcessChartCodeSnippet } from '@/constant/scatter/clusteringProcess';
 
 const ClusteringProcess = () => {
-    registerTransform(ecStat.transform.clustering);
+    registerTransform((ecStat as any).transform.clustering);
 
     const data = [
         [3.275154, 2.957587],

@@ -10,7 +10,7 @@ import { useLoaderData } from 'react-router-dom';
 const TransitionBetweenTreeMapAndSunburst = () => {
     const data: any = useLoaderData();
 
-    const treemapOption = {
+    const treemapOption: any = {
         series: [
             {
                 type: 'treemap',
