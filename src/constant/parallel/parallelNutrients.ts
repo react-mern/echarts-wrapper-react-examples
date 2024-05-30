@@ -1,5 +1,7 @@
-export const parallelNutrientsCodeSnippet = `import { color } from 'echarts';
-import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+export const parallelNutrientsCodeSnippet = `import Drawer from '@/components/Drawer';
+import { parallelNutrientsCodeSnippet } from '@/constant/parallel/parallelNutrients';
+import { color } from 'echarts';
+import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 
 const ParallelNutrients = () => {
@@ -40,7 +42,7 @@ const ParallelNutrients = () => {
         const groupMap: Record<string, number> = {};
         originData.forEach(function (row) {
             const groupName = row[indices.group];
-            if (!groupMap.hasOwnProperty(groupName)) {
+            if (!Object.prototype.hasOwnProperty.call(groupMap, groupName)) {
                 groupMap[groupName] = 1;
             }
         });
@@ -59,7 +61,7 @@ const ParallelNutrients = () => {
         });
 
         for (const groupName in groupMap) {
-            if (groupMap.hasOwnProperty(groupName)) {
+            if (Object.prototype.hasOwnProperty.call(groupMap, groupName)) {
                 groupCategories.push(groupName);
             }
         }
@@ -179,7 +181,7 @@ const ParallelNutrients = () => {
     }
 
     return (
-        <ReactEcharts option={option} />
+            <EChartsReact option={option} />
     )
 }
 

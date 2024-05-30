@@ -1,4 +1,4 @@
-export const themeRiverLastfmCodeSnippet = `import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+export const themeRiverLastfmCodeSnippet = `import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 
 const ThemeRiverLastfm = () => {
     // From https://github.com/jsundram/streamgraph.js/blob/master/examples/data/lastfm.js
@@ -76,7 +76,7 @@ const ThemeRiverLastfm = () => {
     };
 
     return (
-        <ReactEcharts option={option} />
+        <EChartsReact option={option} />
     )
 }
 

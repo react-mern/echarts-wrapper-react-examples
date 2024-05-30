@@ -1,7 +1,7 @@
 import Drawer from '@/components/Drawer';
 import { customCalenderIconCodeSnippet } from '@/constant/calender/customCalenderIcon';
 import { format, number } from 'echarts';
-import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 
 const CustomCalenderIcon = () => {
     const layouts = [
@@ -142,7 +142,7 @@ const CustomCalenderIcon = () => {
     return (
         <>
             <Drawer>{customCalenderIconCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 }

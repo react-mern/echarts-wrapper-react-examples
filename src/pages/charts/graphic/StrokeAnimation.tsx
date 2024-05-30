@@ -1,6 +1,6 @@
 import Drawer from '@/components/Drawer';
 import { strokeAnimationCodeSnippet } from '@/constant/graphic/strokeAnimation';
-import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 
 const StrokeAnimation = () => {
 
@@ -56,7 +56,7 @@ const StrokeAnimation = () => {
     return (
         <>
             <Drawer>{strokeAnimationCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 }

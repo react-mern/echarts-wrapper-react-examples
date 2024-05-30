@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 import Drawer from '@/components/Drawer';
 import { ringGuageCodeSnippet } from '@/constant/guage/ringGuage';
 
@@ -121,7 +121,7 @@ const RingGauge = () => {
     return (
         <>
             <Drawer>{ringGuageCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 }

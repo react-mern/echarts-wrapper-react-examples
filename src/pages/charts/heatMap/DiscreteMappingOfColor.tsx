@@ -1,6 +1,6 @@
 import Drawer from '@/components/Drawer';
 import { DiscreteMappingOfColorCodeSnippet } from '@/constant/heat-map/discreteMappingOfColor';
-import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 
 const DiscreteMappingOfColor = () => {
     const noise = getNoiseHelper();
@@ -201,7 +201,7 @@ const DiscreteMappingOfColor = () => {
     return (
         <>
             <Drawer>{DiscreteMappingOfColorCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     );
 };

@@ -1,5 +1,5 @@
 export const GEOBeefCutsCodeSnippets = `import { registerMap } from 'echarts';
-import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 
 const GEOBeefCuts = () => {
@@ -72,7 +72,7 @@ const GEOBeefCuts = () => {
     };
 
     return (
-        <ReactEcharts option={option} />
+        <EChartsReact option={option} />
     )
 }
 

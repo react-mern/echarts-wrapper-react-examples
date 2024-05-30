@@ -1,6 +1,6 @@
 import Drawer from '@/components/Drawer';
 import { nightingaleChartCodeSnippets } from '@/constant/pie/nightingaleChart';
-import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 
 const NightingaleChart = () => {
     const option: EChartsOption = {
@@ -90,7 +90,7 @@ const NightingaleChart = () => {
     return (
         <>
             <Drawer>{nightingaleChartCodeSnippets}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     );
 };

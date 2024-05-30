@@ -1,4 +1,4 @@
-export const gradientEdgeCodeSnippet = `import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+export const gradientEdgeCodeSnippet = `import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom'
 
 const GradientEdge = () => {
@@ -27,7 +27,7 @@ const GradientEdge = () => {
         ]
     }
     return (
-        <ReactEcharts option={option} />
+        <EChartsReact option={option} />
     )
 }
 

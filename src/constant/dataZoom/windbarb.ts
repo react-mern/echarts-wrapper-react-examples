@@ -1,5 +1,5 @@
 export const windbarbCodeSnippet = `import { CustomSeriesOption, CustomSeriesRenderItemAPI, CustomSeriesRenderItemParams, format } from 'echarts';
-import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 
 const Windbarb = () => {
@@ -308,7 +308,7 @@ const Windbarb = () => {
         ],
     };
 
-    return <ReactEcharts option={option} />;
+    return <EChartsReact option={option} />;
 };
 
 export default Windbarb;

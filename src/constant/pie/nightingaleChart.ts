@@ -1,4 +1,4 @@
-export const nightingaleChartCodeSnippets = `import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+export const nightingaleChartCodeSnippets = `import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 
 const NightingaleChart = () => {
     const option: EChartsOption = {
@@ -85,7 +85,7 @@ const NightingaleChart = () => {
             },
         ],
     };
-    return <ReactEcharts option={option} />;
+    return <EChartsReact option={option} />;
 };
 
 export default NightingaleChart;

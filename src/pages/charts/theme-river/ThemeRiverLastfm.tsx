@@ -1,6 +1,6 @@
 import Drawer from '@/components/Drawer';
 import { themeRiverLastfmCodeSnippet } from '@/constant/theme-river/themeRiverLastfn';
-import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 
 const ThemeRiverLastfm = () => {
     // From https://github.com/jsundram/streamgraph.js/blob/master/examples/data/lastfm.js
@@ -80,7 +80,7 @@ const ThemeRiverLastfm = () => {
     return (
         <>
             <Drawer>{themeRiverLastfmCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     );
 };

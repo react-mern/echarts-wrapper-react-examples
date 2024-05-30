@@ -1,4 +1,4 @@
-export const HideOverLappedLabelCodeSnippet = `import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+export const HideOverLappedLabelCodeSnippet = `import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom'
 
 const HideOverLappedLabel = () => {
@@ -42,7 +42,7 @@ const HideOverLappedLabel = () => {
         ]
     };
     return (
-        <ReactEcharts option={option} />
+        <EChartsReact option={option} />
     )
 }
 

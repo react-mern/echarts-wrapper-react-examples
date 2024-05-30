@@ -1,6 +1,6 @@
 import Drawer from '@/components/Drawer';
 import { StackedBarWithBorderRadiusCodeSnippets } from '@/constant/bar/stackedBarWithRadius';
-import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 
 const StackedBarWithBorderRadius = () => {
     const series = [
@@ -90,7 +90,7 @@ const StackedBarWithBorderRadius = () => {
     return (
         <>
             <Drawer>{StackedBarWithBorderRadiusCodeSnippets}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 };

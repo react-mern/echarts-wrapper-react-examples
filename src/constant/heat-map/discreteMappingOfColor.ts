@@ -1,4 +1,4 @@
-export const DiscreteMappingOfColorCodeSnippet = `import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+export const DiscreteMappingOfColorCodeSnippet = `import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 
 const DiscreteMappingOfColor = () => {
     const noise = getNoiseHelper();
@@ -197,7 +197,7 @@ const DiscreteMappingOfColor = () => {
     }
 
     return (
-        <ReactEcharts option={option} />
+        <EChartsReact option={option} />
     );
 };
 

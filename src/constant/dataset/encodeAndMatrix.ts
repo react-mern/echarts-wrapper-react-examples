@@ -1,4 +1,4 @@
-export const encodeAndMatrixCodeSnippet = `import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+export const encodeAndMatrixCodeSnippet = `import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 
 const EncodeAndMatrix = () => {
@@ -113,7 +113,7 @@ const EncodeAndMatrix = () => {
         ]
     }
     return (
-        <ReactEcharts option={option} />
+        <EChartsReact option={option} />
     )
 }
 

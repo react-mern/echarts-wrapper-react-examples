@@ -1,5 +1,5 @@
 export const basicLineChartCodeSnippets = `
-import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 
 const BasicLineChart = () => {
     const option: EChartsOption = {
@@ -18,7 +18,7 @@ const BasicLineChart = () => {
         ],
     };
     
-    return <ReactEcharts option={option} />;
+    return <EChartsReact option={option} />;
 };
 
 export default BasicLineChart;

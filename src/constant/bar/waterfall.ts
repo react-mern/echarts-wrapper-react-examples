@@ -1,4 +1,4 @@
-export const WaterfallChartCodeSnippets = `import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react'
+export const WaterfallChartCodeSnippets = `import { EChartsReact, EChartsOption } from 'echarts-wrapper-react'
 
 const WaterFallChart = () => {
     const option: EChartsOption = {
@@ -60,7 +60,7 @@ const WaterFallChart = () => {
         ]
     };
     return (
-        <ReactEcharts option={option} />
+        <EChartsReact option={option} />
     )
 }
 

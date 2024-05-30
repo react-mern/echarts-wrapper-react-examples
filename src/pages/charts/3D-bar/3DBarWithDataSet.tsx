@@ -1,4 +1,4 @@
-import { ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 import 'echarts-gl';
 import Drawer from '@/components/Drawer';
@@ -48,7 +48,7 @@ const _3DBarWithDataSet = () => {
     return (
         <>
             <Drawer>{_3DBarWithDataSetCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     );
 };

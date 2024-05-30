@@ -1,4 +1,4 @@
-export const dataTransformFilterCodeSnippets = `import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+export const dataTransformFilterCodeSnippets = `import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 
 const DataTransformFilter = () => {
@@ -77,7 +77,7 @@ const DataTransformFilter = () => {
         ]
     };
     return (
-        <ReactEcharts option={option} />
+        <EChartsReact option={option} />
     )
 }
 

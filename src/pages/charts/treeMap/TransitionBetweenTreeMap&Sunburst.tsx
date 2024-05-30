@@ -1,7 +1,7 @@
 import Drawer from '@/components/Drawer';
 import { transitionBetweenTreeMapAndSunburstCodeSnippet } from '@/constant/tree-map/transitionBetweenTreeMap&Sunburst';
 import {
-    ReactEcharts,
+    EChartsReact,
     EChartsOption,
 } from 'echarts-wrapper-react';
 import { useEffect, useState } from 'react';
@@ -69,7 +69,7 @@ const TransitionBetweenTreeMapAndSunburst = () => {
     return (
         <>
             <Drawer>{transitionBetweenTreeMapAndSunburstCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 };

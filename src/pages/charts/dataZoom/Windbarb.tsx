@@ -1,7 +1,7 @@
 import Drawer from '@/components/Drawer';
 import { windbarbCodeSnippet } from '@/constant/dataZoom/windbarb';
 import { CustomSeriesOption, CustomSeriesRenderItemAPI, CustomSeriesRenderItemParams, format } from 'echarts';
-import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 
 const Windbarb = () => {
@@ -313,7 +313,7 @@ const Windbarb = () => {
     return (
         <>
             <Drawer>{windbarbCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 };

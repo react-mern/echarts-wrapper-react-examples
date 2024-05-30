@@ -1,4 +1,4 @@
-export const strokeAnimationCodeSnippet = `import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+export const strokeAnimationCodeSnippet = `import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 
 const StrokeAnimation = () => {
 
@@ -52,7 +52,7 @@ const StrokeAnimation = () => {
     };
 
     return (
-        <ReactEcharts option={option} />
+        <EChartsReact option={option} />
     )
 }
 

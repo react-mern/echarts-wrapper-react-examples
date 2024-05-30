@@ -1,5 +1,5 @@
 import { registerTransform } from 'echarts';
-import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 import ecStat from 'echarts-stat';
 import Drawer from '@/components/Drawer';
 import { clusteringProcessChartCodeSnippet } from '@/constant/scatter/clusteringProcess';
@@ -140,7 +140,7 @@ const ClusteringProcess = () => {
     return (
         <>
             <Drawer>{clusteringProcessChartCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 }

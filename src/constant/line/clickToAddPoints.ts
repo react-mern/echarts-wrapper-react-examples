@@ -1,4 +1,4 @@
-export const clickToAddPointsCodeSnippets = `import { EChartsOption, ReactEcharts, ReactEchartsRef } from "echarts-wrapper-react";
+export const clickToAddPointsCodeSnippets = `import { EChartsOption, EChartsReact, EChartsReactRef } from "echarts-wrapper-react";
 import { useEffect, useMemo, useRef } from "react";
 
 const ClickToAddPoints = () => {
@@ -52,7 +52,7 @@ const ClickToAddPoints = () => {
         ]
     };
 
-    const chartRef = useRef<ReactEchartsRef>(null);
+    const chartRef = useRef<EChartsReactRef>(null);
 
     useEffect(() => {
         const chartInsatnce = chartRef?.current?.getEchartsInstance();
@@ -83,7 +83,7 @@ const ClickToAddPoints = () => {
     }, [data])
 
     return (
-        <ReactEcharts option={option} ref={chartRef} />
+        <EChartsReact option={option} ref={chartRef} />
     )
 }
 

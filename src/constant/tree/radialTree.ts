@@ -1,6 +1,6 @@
 export const radialTreeCodeSnippet = `import Drawer from '@/components/Drawer';
 import { radialTreeCodeSnippet } from '@/constant/tree/radialTree';
-import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom'
 
 const RadialTree = () => {
@@ -28,7 +28,7 @@ const RadialTree = () => {
         ]
     }
     return (
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
     )
 }
 

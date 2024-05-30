@@ -1,6 +1,6 @@
 import Drawer from '@/components/Drawer';
 import { encodeAndMatrixCodeSnippet } from '@/constant/dataset/encodeAndMatrix';
-import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 
 const EncodeAndMatrix = () => {
@@ -117,7 +117,7 @@ const EncodeAndMatrix = () => {
     return (
         <>
             <Drawer>{encodeAndMatrixCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 }

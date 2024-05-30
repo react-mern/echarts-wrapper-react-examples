@@ -1,5 +1,5 @@
 export const customCalenderIconCodeSnippet = `import { format, number } from 'echarts';
-import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 
 const CustomCalenderIcon = () => {
     const layouts = [
@@ -138,7 +138,7 @@ const CustomCalenderIcon = () => {
 
 
     return (
-        <ReactEcharts option={option} />
+        <EChartsReact option={option} />
     )
 }
 

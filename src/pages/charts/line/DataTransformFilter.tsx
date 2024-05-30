@@ -1,6 +1,6 @@
 import Drawer from '@/components/Drawer';
 import { dataTransformFilterCodeSnippets } from '@/constant/line/dataTransformFilter';
-import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 
 const DataTransformFilter = () => {
@@ -81,7 +81,7 @@ const DataTransformFilter = () => {
     return (
         <>
             <Drawer>{dataTransformFilterCodeSnippets}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 }

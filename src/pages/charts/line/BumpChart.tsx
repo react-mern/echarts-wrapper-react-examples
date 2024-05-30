@@ -1,4 +1,4 @@
-import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 import { SeriesOption } from 'echarts';
 import Drawer from '@/components/Drawer';
 import { bumpChartCodeSnippets } from '@/constant/line/bumpChart';
@@ -129,7 +129,7 @@ const BumpChart = () => {
     return (
         <>
             <Drawer>{bumpChartCodeSnippets}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     );
 };

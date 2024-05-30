@@ -1,4 +1,4 @@
-import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react'
+import { EChartsReact, EChartsOption } from 'echarts-wrapper-react'
 import { basicLineChartCodeSnippets } from '../../../constant/line/basicLineChart';
 import Drawer from '../../../components/Drawer';
 
@@ -25,7 +25,7 @@ const BasicLineChart = () => {
             <Drawer>
                 {basicLineChartCodeSnippets}
             </Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 }

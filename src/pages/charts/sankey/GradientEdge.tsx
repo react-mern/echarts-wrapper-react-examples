@@ -1,6 +1,6 @@
 import Drawer from '@/components/Drawer';
 import { gradientEdgeCodeSnippet } from '@/constant/sankey/gradientEdge';
-import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom'
 
 const GradientEdge = () => {
@@ -31,7 +31,7 @@ const GradientEdge = () => {
     return (
         <>
             <Drawer>{gradientEdgeCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 }

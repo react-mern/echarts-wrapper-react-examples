@@ -1,6 +1,6 @@
 import Drawer from '@/components/Drawer';
 import { HideOverLappedLabelCodeSnippet } from '@/constant/graph/hideOverLappedLabel';
-import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom'
 
 const HideOverLappedLabel = () => {
@@ -46,7 +46,7 @@ const HideOverLappedLabel = () => {
     return (
         <>
             <Drawer>{HideOverLappedLabelCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 }

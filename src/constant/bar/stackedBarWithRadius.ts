@@ -1,4 +1,4 @@
-export const StackedBarWithBorderRadiusCodeSnippets = `import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+export const StackedBarWithBorderRadiusCodeSnippets = `import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 
 const StackedBarWithBorderRadius = () => {
     const series = [
@@ -86,7 +86,7 @@ const StackedBarWithBorderRadius = () => {
     };
 
 
-    return <ReactEcharts option={option} />;
+    return <EChartsReact option={option} />;
 };
 
 export default StackedBarWithBorderRadius;

@@ -1,4 +1,4 @@
-export const _3DBarWithDataSetCodeSnippet = `import { ReactEcharts } from 'echarts-wrapper-react';
+export const _3DBarWithDataSetCodeSnippet = `import { EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 import 'echarts-gl';
 
@@ -45,7 +45,7 @@ const _3DBarWithDataSet = () => {
     };
     return (
         <>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     );
 };

@@ -1,7 +1,7 @@
 import Drawer from '@/components/Drawer';
 import { GEOBeefCutsCodeSnippets } from '@/constant/geo-map/GEOBeefCuts';
 import { registerMap } from 'echarts';
-import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 
 const GEOBeefCuts = () => {
@@ -76,7 +76,7 @@ const GEOBeefCuts = () => {
     return (
         <>
             <Drawer>{GEOBeefCutsCodeSnippets}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 }

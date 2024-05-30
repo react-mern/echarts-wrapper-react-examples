@@ -1,4 +1,4 @@
-export const globalLayersCodeSnippet = `import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+export const globalLayersCodeSnippet = `import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import 'echarts-gl';
 
 const GlobeLayers = () => {
@@ -38,7 +38,7 @@ const GlobeLayers = () => {
     };
 
     return (
-        <ReactEcharts option={option} />
+        <EChartsReact option={option} />
     )
 }
 

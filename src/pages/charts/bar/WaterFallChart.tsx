@@ -1,6 +1,6 @@
 import Drawer from '@/components/Drawer';
 import { WaterfallChartCodeSnippets } from '@/constant/bar/waterfall';
-import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react'
+import { EChartsReact, EChartsOption } from 'echarts-wrapper-react'
 
 const WaterFallChart = () => {
     const option: EChartsOption = {
@@ -64,7 +64,7 @@ const WaterFallChart = () => {
     return (
         <>
             <Drawer>{WaterfallChartCodeSnippets}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 }

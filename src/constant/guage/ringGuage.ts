@@ -1,5 +1,5 @@
 export const ringGuageCodeSnippet = `import { useEffect, useState } from 'react'
-import { ReactEcharts, EChartsOption } from 'echarts-wrapper-react';
+import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 
 const RingGauge = () => {
 
@@ -117,7 +117,7 @@ const RingGauge = () => {
     }, [])
 
     return (
-        <ReactEcharts option={option} />
+        <EChartsReact option={option} />
     )
 }
 

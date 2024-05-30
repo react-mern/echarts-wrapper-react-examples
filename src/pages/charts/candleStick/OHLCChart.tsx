@@ -1,6 +1,6 @@
 import Drawer from '@/components/Drawer';
 import { OHLCChartCodeSnippet } from '@/constant/candleStick/OHLCChart';
-import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 
 const OHLCChart = () => {
@@ -171,7 +171,7 @@ const OHLCChart = () => {
     return (
         <>
             <Drawer>{OHLCChartCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 }

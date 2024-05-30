@@ -1,4 +1,4 @@
-import { EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import 'echarts-gl';
 import Drawer from '@/components/Drawer';
 import { globalLayersCodeSnippet } from '@/constant/3D-globe/globalLayers';
@@ -42,7 +42,7 @@ const GlobeLayers = () => {
     return (
         <>
             <Drawer>{globalLayersCodeSnippet}</Drawer>
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
         </>
     )
 }

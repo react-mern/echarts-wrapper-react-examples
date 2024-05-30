@@ -1,6 +1,6 @@
 export const bookRecordsCodeSnippet = `import Drawer from '@/components/Drawer';
 import { bookRecordsCodeSnippet } from '@/constant/sunburst/bookRecords';
-import { ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsReact } from 'echarts-wrapper-react';
 
 const BookRecords = () => {
     const colors = ['#FFAE57', '#FF7853', '#EA5151', '#CC3F57', '#9A2555'];
@@ -430,7 +430,7 @@ const BookRecords = () => {
         ],
     };
     return (
-            <ReactEcharts option={option} />
+            <EChartsReact option={option} />
     );
 };
 

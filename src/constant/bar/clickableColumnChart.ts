@@ -1,7 +1,7 @@
 export const clickableColumnChartCodeSnippets = `import Drawer from '@/components/Drawer';
 import { clickableColumnChartCodeSnippets } from '@/constant/bar/clickableColumnChart';
 import { ECElementEvent, graphic } from 'echarts';
-import { ReactEchartsComponentProps, EChartsOption, ReactEcharts } from 'echarts-wrapper-react';
+import { EChartsReactComponentProps, EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 
 const ClickableColumnChart = () => {
 
@@ -74,7 +74,7 @@ const ClickableColumnChart = () => {
     // Enable data zoom when user click bar.
     const zoomSize = 6;
 
-    const clickableColumnChartOnEvents: ReactEchartsComponentProps['onEvents'] =
+    const clickableColumnChartOnEvents: EChartsReactComponentProps['onEvents'] =
     {
         click: function ({ event, chartInstance }) {
             chartInstance.dispatchAction({
@@ -87,7 +87,7 @@ const ClickableColumnChart = () => {
     };
 
     return (
-            <ReactEcharts option={option} onEvents={clickableColumnChartOnEvents} />
+            <EChartsReact option={option} onEvents={clickableColumnChartOnEvents} />
     )
 }
 
