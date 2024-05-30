@@ -9,10 +9,10 @@ import {
 
 const Sidebar = () => {
     return (
-        <div className="flex flex-col h-screen p-6 bg-gray-800 text-white overflow-auto">
+        <div className="flex flex-col h-screen p-6 overflow-auto bg-gray-800 text-white">
             <div className="text-2xl font-bold mb-6">Charts</div>
             {routes.map((route) => {
-                if (route.children) {
+                if (route.children && route.name !== "Home") {
                     return (
                         <Accordion key={route.name} type="single" collapsible>
                             <AccordionItem value={route.name}>

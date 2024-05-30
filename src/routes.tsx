@@ -20,10 +20,20 @@ import {
     ParallelNutrients,
     GradientEdge,
     RingGauge,
-    Home
+    Home,
+    ThemeRiverLastfm,
+    CustomCalenderIcon,
+    EncodeAndMatrix,
+    Windbarb,
+    StrokeAnimation,
+    GlobeLayers,
+    _3DBarWithDataSet
 } from "./pages";
 import RootLayout from "./pages/RootLayout";
+import { _3DBarWithDataSetLoader } from "./pages/charts/3D-bar/3DBarWithDataSet";
 import { OHLCChartLoader } from "./pages/charts/candleStick/OHLCChart";
+import { windbarbLoader } from "./pages/charts/dataZoom/Windbarb";
+import { encodeAndMatrixLoader } from "./pages/charts/dataset/EncodeAndMatrix";
 import { GEOBeefCutsloader } from "./pages/charts/geo-map/GEOBeefCuts";
 import { hideOverLappedLabelLoader } from "./pages/charts/graph/HideOverLappedLabel";
 import { parallelNutrientsLoader } from "./pages/charts/parallel/ParallelNutrients";
@@ -39,7 +49,7 @@ export const routes = [
         name: "Home",
         children: [
             {
-                path: '/',
+                index: true,
                 element: <Home />,
             },
         ]
@@ -255,6 +265,93 @@ export const routes = [
                 path: '/guage/ring-guage',
                 element: <RingGauge />,
                 name: "Ring Guage",
+            }
+        ]
+    },
+    {
+        path: "/theme-river",
+        element: <RootLayout />,
+        name: "Theme River",
+        children: [
+            {
+                path: '/theme-river/theme-river-lastfn',
+                element: <ThemeRiverLastfm />,
+                name: "Theme River Lastfn",
+            }
+        ]
+    },
+    {
+        path: "/calender",
+        element: <RootLayout />,
+        name: "Calender",
+        children: [
+            {
+                path: '/calender/custom-calender-icon',
+                element: <CustomCalenderIcon />,
+                name: "Custom Calender Icon",
+            }
+        ]
+    },
+    {
+        path: "/dataset",
+        element: <RootLayout />,
+        name: "Dataset",
+        children: [
+            {
+                path: '/dataset/encode-and-matrix',
+                element: <EncodeAndMatrix />,
+                name: "Encode and Matrix",
+                loader: encodeAndMatrixLoader
+            }
+        ]
+    },
+    {
+        path: "/dataZoom",
+        element: <RootLayout />,
+        name: "DataZoom",
+        children: [
+            {
+                path: '/dataZoom/windbarb',
+                element: <Windbarb />,
+                name: "Windbarb",
+                loader: windbarbLoader
+            }
+        ]
+    },
+    {
+        path: "/graphic",
+        element: <RootLayout />,
+        name: "Graphic",
+        children: [
+            {
+                path: '/graphic/stroke-animation',
+                element: <StrokeAnimation />,
+                name: "Stroke Animation"
+            }
+        ]
+    },
+    {
+        path: "/3D-globe",
+        element: <RootLayout />,
+        name: "3D Globe",
+        children: [
+            {
+                path: '/3D-globe/global-layers',
+                element: <GlobeLayers />,
+                name: "Global Layers"
+            }
+        ]
+    },
+    {
+        path: "/3D-bar",
+        element: <RootLayout />,
+        name: "3D Bar",
+        children: [
+            {
+                path: '/3D-bar/3D-bar-with-dataset',
+                element: <_3DBarWithDataSet />,
+                name: "3D bar with dataset",
+                loader: _3DBarWithDataSetLoader
             }
         ]
     },
