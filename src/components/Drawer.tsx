@@ -22,9 +22,9 @@ const Drawer = ({ children }: DrawerProps) => {
             <SheetTrigger className="bg-gray-800 text-white ms-auto rounded m-1.5 w-fit px-2 py-1">
                 <CodeIcon />
             </SheetTrigger>
-            <SheetContent className="md:w-fit md:max-w-none w-full overflow-auto">
+            <SheetContent className="md:w-fit md:max-w-full w-full overflow-auto">
                 <SheetHeader>
-                    <SheetDescription className="overflow-auto">
+                    <SheetDescription className="overflow-auto max-w-screen">
                         <SyntaxHighlighter wrapLines language="javascript" style={docco}>
                             {children}
                         </SyntaxHighlighter>
