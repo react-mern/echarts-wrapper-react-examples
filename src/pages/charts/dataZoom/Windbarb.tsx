@@ -1,7 +1,7 @@
 import Drawer from '@/components/Drawer';
 import { windbarbCodeSnippet } from '@/constant/dataZoom/windbarb';
 import { CustomSeriesOption, CustomSeriesRenderItemAPI, CustomSeriesRenderItemParams, format } from 'echarts';
-import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
+import { EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 
 const Windbarb = () => {
@@ -110,7 +110,7 @@ const Windbarb = () => {
         };
     };
 
-    const option: EChartsOption = {
+    const option: any = {
         title: {
             text: '天气 风向 风速 海浪 预报',
             subtext: '示例数据源于 www.seabreeze.com.au',

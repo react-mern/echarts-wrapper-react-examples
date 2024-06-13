@@ -1,6 +1,6 @@
 import Drawer from '@/components/Drawer';
 import { encodeAndMatrixCodeSnippet } from '@/constant/dataset/encodeAndMatrix';
-import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
+import { EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 
 const EncodeAndMatrix = () => {
@@ -9,7 +9,7 @@ const EncodeAndMatrix = () => {
     const sizeValue = '57%';
     const symbolSize = 2.5;
 
-    const option: EChartsOption = {
+    const option: any = {
         legend: {},
         tooltip: {},
         toolbox: {
