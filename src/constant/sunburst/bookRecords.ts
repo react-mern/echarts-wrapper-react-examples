@@ -1,5 +1,4 @@
-export const bookRecordsCodeSnippet = `import Drawer from '@/components/Drawer';
-import { bookRecordsCodeSnippet } from '@/constant/sunburst/bookRecords';
+export const bookRecordsCodeSnippet = `
 import { EChartsReact } from 'echarts-wrapper-react';
 
 const BookRecords = () => {

@@ -1,5 +1,4 @@
-export const parallelNutrientsCodeSnippet = `import Drawer from '@/components/Drawer';
-import { parallelNutrientsCodeSnippet } from '@/constant/parallel/parallelNutrients';
+export const parallelNutrientsCodeSnippet = `
 import { color } from 'echarts';
 import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';

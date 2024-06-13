@@ -1,5 +1,4 @@
-export const OHLCChartCodeSnippet = `import Drawer from '@/components/Drawer';
-import { OHLCChartCodeSnippet } from '@/constant/candleStick/OHLCChart';
+export const OHLCChartCodeSnippet = `
 import { EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom';
 

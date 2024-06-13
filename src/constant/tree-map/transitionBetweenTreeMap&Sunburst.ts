@@ -1,5 +1,4 @@
-export const transitionBetweenTreeMapAndSunburstCodeSnippet = `import Drawer from '@/components/Drawer';
-import { transitionBetweenTreeMapAndSunburstCodeSnippet } from '@/constant/tree-map/transitionBetweenTreeMap&Sunburst';
+export const transitionBetweenTreeMapAndSunburstCodeSnippet = `
 import {
     EChartsReact,
     EChartsOption,

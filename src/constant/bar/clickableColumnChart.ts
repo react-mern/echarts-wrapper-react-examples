@@ -1,5 +1,4 @@
-export const clickableColumnChartCodeSnippets = `import Drawer from '@/components/Drawer';
-import { clickableColumnChartCodeSnippets } from '@/constant/bar/clickableColumnChart';
+export const clickableColumnChartCodeSnippets = `
 import { ECElementEvent, graphic } from 'echarts';
 import { EChartsReactComponentProps, EChartsOption, EChartsReact } from 'echarts-wrapper-react';
 

@@ -1,5 +1,4 @@
-export const radialTreeCodeSnippet = `import Drawer from '@/components/Drawer';
-import { radialTreeCodeSnippet } from '@/constant/tree/radialTree';
+export const radialTreeCodeSnippet = `
 import { EChartsReact, EChartsOption } from 'echarts-wrapper-react';
 import { useLoaderData } from 'react-router-dom'
 
@@ -37,6 +36,5 @@ export default RadialTree
 export async function RadialTreeLoader() {
     const response = await fetch("/api/examples/data/asset/data/flare.json");
     const data = await response.json();
-    console.log(data)
     return data;
 }`;
