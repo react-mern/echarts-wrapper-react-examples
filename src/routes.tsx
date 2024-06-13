@@ -1,46 +1,7 @@
-import {
-    BumpChart,
-    ClickableColumnChart,
-    StackedBarWithBorderRadius,
-    WaterFallChart,
-    BasicLineChart,
-    ClickToAddPoints,
-    DataTransformFilter,
-    NightingaleChart,
-    ClusteringProcess,
-    OHLCChart,
-    dataTransFormFilterLoader,
-    DiscreteMappingOfColor,
-    GEOBeefCuts,
-    HideOverLappedLabel,
-    TransitionBetweenTreeMapAndSunburst,
-    // BusLinesOfBeijing,
-    RadialTree,
-    BookRecords,
-    ParallelNutrients,
-    GradientEdge,
-    RingGauge,
-    Home,
-    ThemeRiverLastfm,
-    CustomCalenderIcon,
-    EncodeAndMatrix,
-    Windbarb,
-    StrokeAnimation,
-    GlobeLayers,
-    _3DBarWithDataSet
-} from "./pages";
+import { Home } from "./pages";
 import RootLayout from "./pages/RootLayout";
-import { _3DBarWithDataSetLoader } from "./pages/charts/3D-bar/3DBarWithDataSet";
-import { OHLCChartLoader } from "./pages/charts/candleStick/OHLCChart";
-import { windbarbLoader } from "./pages/charts/dataZoom/Windbarb";
-import { encodeAndMatrixLoader } from "./pages/charts/dataset/EncodeAndMatrix";
-import { GEOBeefCutsloader } from "./pages/charts/geo-map/GEOBeefCuts";
-import { hideOverLappedLabelLoader } from "./pages/charts/graph/HideOverLappedLabel";
-import { parallelNutrientsLoader } from "./pages/charts/parallel/ParallelNutrients";
-import { gradientEdgeLodaer } from "./pages/charts/sankey/GradientEdge";
-// import  { busLinesOfBeijingLoader } from "./pages/charts/lines/BusLinesOfBeijing";
-import { RadialTreeLoader } from "./pages/charts/tree/RadialTree";
-import { TransitionBetweenTreeMapAndSunburstLoader } from "./pages/charts/treeMap/TransitionBetweenTreeMap&Sunburst";
+
+
 
 export const routes = [
     {
@@ -50,7 +11,7 @@ export const routes = [
         children: [
             {
                 index: true,
-                element: <Home />,
+                element: <Home />
             },
         ]
     },
@@ -61,23 +22,34 @@ export const routes = [
         children: [
             {
                 path: '/line/basic-line-chart',
-                element: <BasicLineChart />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/line/BasicLineChart');
+                    return { Component: module.default };
+                },
                 name: "Basic Line Chart"
             },
             {
                 path: '/line/bump-chart',
-                element: <BumpChart />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/line/BumpChart');
+                    return { Component: module.default };
+                },
                 name: "Bump Chart"
             },
             {
                 path: '/line/data-transform-filter',
-                element: <DataTransformFilter />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/line/DataTransformFilter');
+                    return { Component: module.default, loader: module.dataTransFormFilterLoader };
+                },
                 name: "Data Transform Filter",
-                loader: dataTransFormFilterLoader
             },
             {
                 path: '/line/click-to-add-points',
-                element: <ClickToAddPoints />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/line/ClickToAddPoints');
+                    return { Component: module.default };
+                },
                 name: "Click To Add Points",
             },
         ]
@@ -89,17 +61,26 @@ export const routes = [
         children: [
             {
                 path: '/bar/waterfall-chart',
-                element: <WaterFallChart />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/bar/WaterFallChart');
+                    return { Component: module.default };
+                },
                 name: "Waterfall Chart"
             },
             {
                 path: '/bar/clickable-column-chart',
-                element: <ClickableColumnChart />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/bar/ClickableColumnChart');
+                    return { Component: module.default };
+                },
                 name: "clickable column Chart"
             },
             {
                 path: '/bar/stacked-bar-with-border-radius',
-                element: <StackedBarWithBorderRadius />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/bar/StackedBarWithBorderRadius');
+                    return { Component: module.default };
+                },
                 name: "Stacked Bar With Border Radius"
             }
         ]
@@ -111,7 +92,10 @@ export const routes = [
         children: [
             {
                 path: '/pie/nightingale-chart',
-                element: <NightingaleChart />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/pie/NightingaleChart');
+                    return { Component: module.default };
+                },
                 name: "Nightingale Chart"
             }
         ]
@@ -123,7 +107,10 @@ export const routes = [
         children: [
             {
                 path: '/scatter/clustering-process',
-                element: <ClusteringProcess />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/scatter/ClusteringProcess');
+                    return { Component: module.default };
+                },
                 name: "Clustering Process"
             }
         ]
@@ -135,9 +122,11 @@ export const routes = [
         children: [
             {
                 path: '/geo-map/geo-beef-cuts',
-                element: < GEOBeefCuts />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/geo-map/GEOBeefCuts');
+                    return { Component: module.default, loader: module.GEOBeefCutsloader };
+                },
                 name: "GEO Beef Cuts",
-                loader: GEOBeefCutsloader
             }
         ]
     },
@@ -148,9 +137,11 @@ export const routes = [
         children: [
             {
                 path: '/candle-stick/OHLC-chart',
-                element: < OHLCChart />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/candleStick/OHLCChart');
+                    return { Component: module.default, loader: module.OHLCChartLoader };
+                },
                 name: "OHLC Chart",
-                loader: OHLCChartLoader
             }
         ]
     },
@@ -161,7 +152,10 @@ export const routes = [
         children: [
             {
                 path: '/heat-map/discrete-mapping-of-color',
-                element: < DiscreteMappingOfColor />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/heatMap/DiscreteMappingOfColor');
+                    return { Component: module.default };
+                },
                 name: "Discrete Mapping Of Color",
             }
         ]
@@ -173,9 +167,11 @@ export const routes = [
         children: [
             {
                 path: '/graph/hide-overlapped-label',
-                element: <HideOverLappedLabel />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/graph/HideOverLappedLabel');
+                    return { Component: module.default, loader: module.hideOverLappedLabelLoader };
+                },
                 name: "Hide OverLapped Label",
-                loader: hideOverLappedLabelLoader
             }
         ]
     },
@@ -199,9 +195,11 @@ export const routes = [
         children: [
             {
                 path: '/tree/radial-tree',
-                element: <RadialTree />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/tree/RadialTree');
+                    return { Component: module.default, loader: module.RadialTreeLoader };
+                },
                 name: "Radial Tree",
-                loader: RadialTreeLoader
             }
         ]
     },
@@ -212,9 +210,11 @@ export const routes = [
         children: [
             {
                 path: '/tree-map/transition-between-treeMap-and-sunBurst',
-                element: <TransitionBetweenTreeMapAndSunburst />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/treeMap/TransitionBetweenTreeMap&Sunburst');
+                    return { Component: module.default, loader: module.TransitionBetweenTreeMapAndSunburstLoader };
+                },
                 name: "Transition Between TreeMap & SunBurst",
-                loader: TransitionBetweenTreeMapAndSunburstLoader
             }
         ]
     },
@@ -225,7 +225,10 @@ export const routes = [
         children: [
             {
                 path: '/sun-burst/book-records',
-                element: <BookRecords />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/sunburst/BookRecords');
+                    return { Component: module.default };
+                },
                 name: "book Records",
             }
         ]
@@ -237,9 +240,11 @@ export const routes = [
         children: [
             {
                 path: '/parallel/parallel-nutrients',
-                element: <ParallelNutrients />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/parallel/ParallelNutrients');
+                    return { Component: module.default, loader: module.parallelNutrientsLoader };
+                },
                 name: "parallel Nutrients",
-                loader: parallelNutrientsLoader
             }
         ]
     },
@@ -250,9 +255,11 @@ export const routes = [
         children: [
             {
                 path: '/sankey/gradient-edge',
-                element: <GradientEdge />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/sankey/GradientEdge');
+                    return { Component: module.default, loader: module.gradientEdgeLodaer };
+                },
                 name: "Gradient Edge",
-                loader: gradientEdgeLodaer
             }
         ]
     },
@@ -263,7 +270,10 @@ export const routes = [
         children: [
             {
                 path: '/guage/ring-guage',
-                element: <RingGauge />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/guage/RingGuage');
+                    return { Component: module.default };
+                },
                 name: "Ring Guage",
             }
         ]
@@ -275,7 +285,10 @@ export const routes = [
         children: [
             {
                 path: '/theme-river/theme-river-lastfn',
-                element: <ThemeRiverLastfm />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/theme-river/ThemeRiverLastfm');
+                    return { Component: module.default };
+                },
                 name: "Theme River Lastfn",
             }
         ]
@@ -287,7 +300,10 @@ export const routes = [
         children: [
             {
                 path: '/calender/custom-calender-icon',
-                element: <CustomCalenderIcon />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/calender/CustomCalenderIcon');
+                    return { Component: module.default };
+                },
                 name: "Custom Calender Icon",
             }
         ]
@@ -299,9 +315,11 @@ export const routes = [
         children: [
             {
                 path: '/dataset/encode-and-matrix',
-                element: <EncodeAndMatrix />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/dataset/EncodeAndMatrix');
+                    return { Component: module.default, loader: module.encodeAndMatrixLoader };
+                },
                 name: "Encode and Matrix",
-                loader: encodeAndMatrixLoader
             }
         ]
     },
@@ -312,9 +330,11 @@ export const routes = [
         children: [
             {
                 path: '/dataZoom/windbarb',
-                element: <Windbarb />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/dataZoom/Windbarb');
+                    return { Component: module.default, loader: module.windbarbLoader };
+                },
                 name: "Windbarb",
-                loader: windbarbLoader
             }
         ]
     },
@@ -325,7 +345,10 @@ export const routes = [
         children: [
             {
                 path: '/graphic/stroke-animation',
-                element: <StrokeAnimation />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/graphic/StrokeAnimation');
+                    return { Component: module.default };
+                },
                 name: "Stroke Animation"
             }
         ]
@@ -337,7 +360,10 @@ export const routes = [
         children: [
             {
                 path: '/3D-globe/global-layers',
-                element: <GlobeLayers />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/3D-globe/GlobeLayers');
+                    return { Component: module.default };
+                },
                 name: "Global Layers"
             }
         ]
@@ -349,10 +375,14 @@ export const routes = [
         children: [
             {
                 path: '/3D-bar/3D-bar-with-dataset',
-                element: <_3DBarWithDataSet />,
+                lazy: async () => {
+                    const module = await import('./pages/charts/3D-bar/3DBarWithDataSet');
+                    return { Component: module.default, loader: module._3DBarWithDataSetLoader };
+                },
                 name: "3D bar with dataset",
-                loader: _3DBarWithDataSetLoader
             }
         ]
     },
 ];
+
+export default routes;
