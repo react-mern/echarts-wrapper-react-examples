@@ -19,6 +19,7 @@
     "echarts": "^5.5.0",
     "echarts-gl": "^2.0.9",
     "echarts-stat": "^1.2.0",
+    "echarts-wrapper-react": "^1.0.6",
     "lucide-react": "^0.379.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
