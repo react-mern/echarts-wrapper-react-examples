@@ -3,14 +3,17 @@ const cors = require('cors');
 
 const app = express();
 
+// CORS options
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: 'http://localhost:5173', // Adjust this as needed
 };
 
+// Middleware
 app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 3000;
 
+// Define paths for data fetching
 const dataPaths = [
   '/examples/data/asset/data/life-expectancy-table.json',
   '/examples/data/asset/data/stock-DJI.json',
@@ -29,7 +32,7 @@ const dataPaths = [
   '/examples/data-gl/asset/clouds.png',
 ];
 
-// Generic route handler for JSON and SVG data paths
+// General data fetching route
 dataPaths.forEach((path) => {
   app.get(path, async (req, res) => {
     try {
@@ -41,6 +44,10 @@ dataPaths.forEach((path) => {
       if (path.endsWith('.svg')) {
         const data = await response.text();
         res.header('Content-Type', 'image/svg+xml');
+        res.send(data);
+      } else if (path.endsWith('.jpg') || path.endsWith('.png')) {
+        const data = await response.buffer();
+        res.header('Content-Type', path.endsWith('.jpg') ? 'image/jpeg' : 'image/png');
         res.send(data);
       } else {
         const data = await response.json();
