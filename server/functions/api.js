@@ -1,17 +1,19 @@
 const express = require('express');
 const cors = require('cors');
+const serverless = require('serverless-http');
 
 const app = express();
+const router = express.Router();
 
-// CORS options
 const corsOptions = {
-  origin: 'http://localhost:5173', // Adjust this as needed
+  origin: [
+    'http://localhost:5173',
+    'https://echarts-wrapper-react-examples.netlify.app',
+  ],
 };
 
 // Middleware
 app.use(cors(corsOptions));
-
-const PORT = process.env.PORT || 3000;
 
 // Define paths for data fetching
 const dataPaths = [
@@ -34,7 +36,7 @@ const dataPaths = [
 
 // General data fetching route
 dataPaths.forEach((path) => {
-  app.get(path, async (req, res) => {
+  router.get(path, async (req, res) => {
     try {
       const response = await fetch(`https://echarts.apache.org${path}`);
       if (!response.ok) {
@@ -47,7 +49,10 @@ dataPaths.forEach((path) => {
         res.send(data);
       } else if (path.endsWith('.jpg') || path.endsWith('.png')) {
         const data = await response.buffer();
-        res.header('Content-Type', path.endsWith('.jpg') ? 'image/jpeg' : 'image/png');
+        res.header(
+          'Content-Type',
+          path.endsWith('.jpg') ? 'image/jpeg' : 'image/png'
+        );
         res.send(data);
       } else {
         const data = await response.json();
@@ -60,6 +65,6 @@ dataPaths.forEach((path) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+app.use('/', router);
+
+module.exports.handler = serverless(app);
