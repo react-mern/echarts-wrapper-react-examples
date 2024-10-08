@@ -38,7 +38,9 @@ const dataPaths = [
 dataPaths.forEach((path) => {
   router.get(path, async (req, res) => {
     try {
-      const response = await fetch(`https://echarts.apache.org${path}`);
+      const response = await fetch(`https://echarts.apache.org${path}`, {
+        responseType: path.endsWith('.json') ? 'json' : 'arraybuffer',
+      });
       if (!response.ok) {
         throw new Error(`Failed to fetch data from ${path}`);
       }
@@ -48,12 +50,9 @@ dataPaths.forEach((path) => {
         res.header('Content-Type', 'image/svg+xml');
         res.send(data);
       } else if (path.endsWith('.jpg') || path.endsWith('.png')) {
-        const data = await response.buffer();
-        res.header(
-          'Content-Type',
-          path.endsWith('.jpg') ? 'image/jpeg' : 'image/png'
-        );
-        res.send(data);
+        const contentType = path.endsWith('.jpg') ? 'image/jpeg' : 'image/png';
+        res.header('Content-Type', contentType);
+        res.send(response.data);
       } else {
         const data = await response.json();
         res.json(data);
